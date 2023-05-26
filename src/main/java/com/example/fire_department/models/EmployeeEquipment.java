@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class EmployeeEquipment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer equipmentId;
+    private Integer employeeEquipmentId;
     @Column(name = "employee_id")
     private Integer employeeId;
     @Column(name = "equipment_condition", length = 25)
@@ -22,18 +22,22 @@ public class EmployeeEquipment {
         this.equipmentCondition = equipmentCondition;
     }
 
-    public Integer getEquipmentId() {
-        return equipmentId;
+    public Integer getEmployeeEquipmentId() {
+        return employeeEquipmentId;
     }
+
     public Integer getEmployeeId() {
         return employeeId;
     }
+
     public void setEmployeeId(Integer employeeId) {
         this.employeeId = employeeId;
     }
+
     public String getEquipmentCondition() {
         return equipmentCondition;
     }
+
     public void setEquipmentCondition(String equipmentCondition) {
         this.equipmentCondition = equipmentCondition;
     }

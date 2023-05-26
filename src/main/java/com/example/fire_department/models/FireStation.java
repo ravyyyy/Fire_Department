@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Fire_station")
+@Table(name = "fire_station")
 public class FireStation {
     @Id
     @Column(name = "unit_id", length = 15)
@@ -42,39 +42,51 @@ public class FireStation {
     public String getUnitId() {
         return unitId;
     }
+
     public String getAddress() {
         return address;
     }
+
     public void setAddress(String address) {
         this.address = address;
     }
+
     public String getCity() {
         return city;
     }
+
     public void setCity(String city) {
         this.city = city;
     }
+
     public String getCounty() {
         return county;
     }
+
     public void setCounty(String county) {
         this.county = county;
     }
+
     public Integer getEmployeesCount() {
         return employeesCount;
     }
+
     public void setEmployeesCount(Integer employeesCount) {
         this.employeesCount = employeesCount;
     }
+
     public Integer getInterventionsCount() {
         return interventionsCount;
     }
+
     public void setInterventionsCount(Integer interventionsCount) {
         this.interventionsCount = interventionsCount;
     }
+
     public Integer getSpecialVehiclesCount() {
         return specialVehiclesCount;
     }
+
     public void setSpecialVehiclesCount(Integer specialVehiclesCount) {
         this.specialVehiclesCount = specialVehiclesCount;
     }

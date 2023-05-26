@@ -25,15 +25,19 @@ public class EmployeeType {
     public Integer getEmployeeTypeId() {
         return employeeTypeId;
     }
+
     public String getEmployeeTypeName() {
         return employeeTypeName;
     }
+
     public void setEmployeeTypeName(String employeeTypeName) {
         this.employeeTypeName = employeeTypeName;
     }
+
     public Integer getRetirementAge() {
         return retirementAge;
     }
+
     public void setRetirementAge(Integer retirementAge) {
         this.retirementAge = retirementAge;
     }

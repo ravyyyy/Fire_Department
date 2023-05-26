@@ -51,13 +51,12 @@ public class EmployeeEquipmentController {
         }
     }
 
-    @PutMapping("/employeeequipments/{equipmentId}")
-    public ResponseEntity<EmployeeEquipment> updateEmployeeEquipment(@PathVariable("equipmentId") Integer equipmentId,
+    @PutMapping("/employeeequipments/{employeeEquipmentId}")
+    public ResponseEntity<EmployeeEquipment> updateEmployeeEquipment(@PathVariable("employeeEquipmentId") Integer employeeEquipmentId,
                                                          @RequestBody EmployeeEquipment employeeEquipment) {
-        Optional<EmployeeEquipment> employeeEquipmentData = employeeEquipmentRepository.findById(equipmentId);
+        Optional<EmployeeEquipment> employeeEquipmentData = employeeEquipmentRepository.findById(employeeEquipmentId);
         if (employeeEquipmentData.isPresent()) {
             EmployeeEquipment _employeeEquipment = employeeEquipmentData.get();
-            _employeeEquipment.setEmployeeId(employeeEquipment.getEmployeeId());
             _employeeEquipment.setEmployeeId(employeeEquipment.getEmployeeId());
             _employeeEquipment.setEquipmentCondition(employeeEquipment.getEquipmentCondition());
             return new ResponseEntity<>(employeeEquipmentRepository.save(_employeeEquipment), HttpStatus.OK);
@@ -76,10 +75,10 @@ public class EmployeeEquipmentController {
         }
     }
 
-    @DeleteMapping("/employeeequipments/{equipmentId}")
-    public ResponseEntity<HttpStatus> deleteEmployeeEquipment(@PathVariable("equipmentId") Integer equipmentId) {
+    @DeleteMapping("/employeeequipments/{employeeEquipmentId}")
+    public ResponseEntity<HttpStatus> deleteEmployeeEquipment(@PathVariable("employeeEquipmentId") Integer employeeEquipmentId) {
         try {
-            employeeEquipmentRepository.deleteById(equipmentId);
+            employeeEquipmentRepository.deleteById(employeeEquipmentId);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

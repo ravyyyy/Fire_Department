@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS fire_station (
 
 CREATE TABLE IF NOT EXISTS employee_equipment (
     employee_equipment_id SERIAL PRIMARY KEY,
-    employee_id INTEGER,
+    employee_id INTEGER UNIQUE,
     equipment_condition VARCHAR(25)
 );
 

@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class VehicleEquipment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer vehicleEquipmentId;
+    private Integer equipmentId;
     @Column(name = "licence_plate_number", length = 15)
     private String licencePlateNumber;
     @Column(name = "equipment_condition", length = 25)
@@ -26,7 +26,7 @@ public class VehicleEquipment {
     }
 
     public Integer getEquipmentId() {
-        return vehicleEquipmentId;
+        return equipmentId;
     }
 
     public String getLicencePlateNumber() {

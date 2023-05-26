@@ -58,6 +58,7 @@ public class VehicleEquipmentController {
         Optional<VehicleEquipment> vehicleEquipmentData = vehicleEquipmentRepository.findById(equipmentId);
         if (vehicleEquipmentData.isPresent()) {
             VehicleEquipment _vehicleEquipment = vehicleEquipmentData.get();
+            _vehicleEquipment.setLicencePlateNumber(vehicleEquipment.getLicencePlateNumber());
             _vehicleEquipment.setEquipmentCondition(vehicleEquipment.getEquipmentCondition());
             _vehicleEquipment.setEquipmentName(vehicleEquipment.getEquipmentName());
             return new ResponseEntity<>(vehicleEquipmentRepository.save(_vehicleEquipment), HttpStatus.OK);

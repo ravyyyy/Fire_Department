@@ -78,7 +78,7 @@ public class InterventionController {
     }
 
     @DeleteMapping("/interventions/{interventionId}")
-    public ResponseEntity<HttpStatus> deleteSpecialVehicle(@PathVariable("interventionId") Integer interventionId) {
+    public ResponseEntity<HttpStatus> deleteIntervention(@PathVariable("interventionId") Integer interventionId) {
         try {
             interventionRepository.deleteById(interventionId);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);

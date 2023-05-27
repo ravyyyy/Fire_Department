@@ -118,6 +118,7 @@ CREATE TABLE IF NOT EXISTS special_vehicle_intervention (
 	intervention_id SERIAL PRIMARY KEY,
 	licence_plate_number VARCHAR(15),
 	
+	FOREIGN KEY (intervention_id) REFERENCES intervention(intervention_id),
 	FOREIGN KEY (licence_plate_number) REFERENCES special_vehicle(licence_plate_number)
 );
 

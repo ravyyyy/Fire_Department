@@ -1,8 +1,6 @@
 package com.example.fire_department.controllers;
 
-import com.example.fire_department.models.SpecialVehicle;
 import com.example.fire_department.models.SpecialVehicleRevision;
-import com.example.fire_department.repositories.SpecialVehicleRepository;
 import com.example.fire_department.repositories.SpecialVehicleRevisionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

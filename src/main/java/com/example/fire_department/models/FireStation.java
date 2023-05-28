@@ -43,6 +43,10 @@ public class FireStation {
         return unitId;
     }
 
+    public void setUnitId(String unitId) {
+        this.unitId = unitId;
+    }
+
     public String getAddress() {
         return address;
     }

@@ -1,7 +1,6 @@
 package com.example.fire_department.controllers;
 
 import com.example.fire_department.models.DutyShift;
-import com.example.fire_department.models.Employee;
 import com.example.fire_department.repositories.DutyShiftRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

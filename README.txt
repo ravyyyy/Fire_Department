@@ -39,3 +39,7 @@ This will delete all the objects from that specific table.
 If you wish to delete a specific object, use this URL: localhost:8080/api/firestations/ (for example) followed by the id of the object you wish to delete.
 
 Utilized software versions:
+- OpenJDK: 19.0.2
+- Spring Boot: 3.1.0
+- PostgreSQL: 42.6.0
+- JPA: 2.2
